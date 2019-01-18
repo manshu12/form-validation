@@ -6,6 +6,7 @@
 	<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 	<link rel="shortcut icon" type="image/x-icon" href="fav.ico"/>
 	<style type="text/css">
+		
 		body
 		{
 			background-color: #ccffff;
@@ -20,10 +21,10 @@
 			margin: 20px 420px;
 			font-family: "Comic Sans MS";
 			position: relative;
-  			box-shadow: 5px 55px 5px rgba(0, 0, 0, .5);
+  			box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, .5);
   			padding: 10px;
   			background: white;
-  			background-color: #ff9900;
+  			background-color: #ACFCFC;
   			border-radius: 30px;
 		}
 		fieldset legend
@@ -120,47 +121,50 @@
 		}
 		input[type="submit"] 
 		{
-			 background-color: #4CAF50; 
+			 background-color: #06CFCF; 
 			 border: none;
 			 color: white;
 			 text-align: center;
 			 text-decoration: none;
 			 display: inline-block;
-			 font-size: 20px;
+			 font-size: 25px;
 			 cursor: pointer;
-			 padding: 12px 24px;
+			 padding: 20px 30px;
 			 border-radius: 10px;
 			 transition-duration: 0.5s;
-			 margin-left: 110px;
+			 margin-left: 80px;
+			 margin-bottom: 20px;
+			font-family: "Comic Sans MS";
+
 		}
 		input[type="reset"]
 		{
-			 background-color: #4CAF50; 
+			 background-color: #06CFCF; 
 			 border: none;
 			 color: white;
 			 text-align: center;
 			 text-decoration: none;
 			 display: inline-block;
-			 font-size: 20px;
+			 font-size: 25px;
 			 cursor: pointer;
-			 padding: 12px 24px;
+			 padding: 20px 35px;
 			 border-radius: 10px;
 			 transition-duration: 0.5s;
 			 margin-left: 10px;
+			 font-family: "Comic Sans MS";
+			
 		}
 		input[type="submit"]:hover, input[type="reset"]:hover
 		{
-			border: 2px solid #4CAF50;
+			/*border: 2px solid #4CAF50;*/
 			background-color: white;
 			color: black;
+			font-size: 25px;
 		} 
-		input[type="text"], input[type="email"], input[type="password"],input[type="textarea"], #select1, #select2
+		
+		input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus,input[type="textarea"]:focus, #select1:focus, #select2:focus, textarea:focus
 		{
-			transition: 0.5s;
-		}
-		input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus,input[type="textarea"]:focus, #select1:focus, #select2:focus
-		{
-			
+			border:none;
 		}
 	</style>
 </head>
@@ -296,9 +300,7 @@
   		    Gender:<span>&nbsp;&nbsp;&nbsp;</span> <input type="radio" name="radio">Male
   		    	<input type="radio" name="radio">Female
   		    	<input type="radio" name="radio">Other<br><br>
-  		    	Notes:<br> <textarea rows="10" cols="50">
-					
-						</textarea>
+  		    	Notes:<br> <textarea rows="10" cols="50"></textarea>
   		    	<input type="submit" name="submit" value="Submit">
   		    	<input type="reset" name="reset" value="Reset">
 
