@@ -3,322 +3,57 @@
 <head>
 	<title>Student Form</title>
 	<link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
-	<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
 	<link rel="shortcut icon" type="image/x-icon" href="fav.ico"/>
-	<style type="text/css">
-		
-		body
-		{
-			background-color: #ccffff;
-			background-repeat: no-repeat;
-			background-size: cover;
-		}
-		fieldset
-		{
-			font-size: 20px;
-			margin: 0px 380px;
-			font-family: "Comic Sans MS";
-			position: relative;
-  			box-shadow: 0px 0px 10px 10px rgba(0, 0, 0, .5);
-  		/*	padding: 10px;*/
-  			background: white;
-  			background-color: #ACFCFC;
-  			border-radius: 30px;
-  			overflow: auto;
-  			margin-top: -15px;
-		}
-		fieldset legend
-		{
-			color:hsl(0, 100%, 50%);
-			font-weight: 500;
-			text-align: center;
-		}
+	<script src="script.js"></script>
+	<link rel="stylesheet" href="style.css">
+	<script src="newscript.js"></script>
 
-		input[type="text"], input[type="email"], input[type="password"] 
-		{
-			box-sizing: border-box;
-			padding: 8px 10px;
-			margin-bottom: 10px;
-			width: 70%;	
-			border-radius: 7px;
-			font-size: 16px;
-			border: 2px solid green;
-			background-color: #FEFFF8;
-			margin-left: 20px;
-			
-		}
-		input[type="date"]
-		{
-			box-sizing: border-box;
-			padding: 6px 10px;
-			border-radius: 7px;
-			font-size: 16px;
-			width: 69%;
-			border: 2px solid green;
-			background-color: #FEFFF8;
-			outline: none;
-			margin-left: 7px;
-			margin-top: -10px;
-			margin-bottom: -10px;
-			font-family: "Comic Sans MS";
-		}
-		input[type="checkbox"]
-		{
-			height: 20px;
-			width: 20px;		
-			background-color: #FEFFF8;	
-		}
-		#select1, #option1
-		{
-			padding: 6px 10px;
-			margin-top: -10px;
-			margin-left: 10px;
-			width: 69.5%;
-			border:2px solid green;
-			border-radius: 7px;
-			background-color: #FEFFF8;
-			font-size: 16px;
-			font-family: "Comic Sans MS";
-		}
-		input[type="submit"], input[type="reset"]
-		{
-			padding: 8px 20px;
-			margin: 20px;
-			margin-left: 20px;
-		}
-		textarea
-		{
-			width: 66.5%; 
-			height: 50px;
-			margin-left: 82px;
-			border:2px solid green;
-			background-color: #FEFFF8;
-			padding: 5px;
-			border-radius: 7px;
-			font-family: "Comic Sans MS";
-			font-size: 20px;
-			margin-top: -5px;
-		}
-		input[type="radio"]
-		{
-			height: 20px;
-			width: 20px;
-			font-size: 25px;
-			margin-left: 6px;
-			margin-bottom: 20px;
-
-		}
-		#radio1
-		{
-			margin-left: 100px;
-		}
-		.checkbox{
-			display: inline-block;
-			float: right;
-			margin-right: 40px;
-
-		}
-		input[type="submit"] 
-		{
-			 background-color: #06CFCF; 
-			 border: none;
-			 color: white;
-			 text-align: center;
-			 text-decoration: none;
-			 display: inline-block;
-			 font-size: 25px;
-			 cursor: pointer;
-			 padding: 10px 20px;
-			 border-radius: 10px;
-			 transition-duration: 0.5s;
-			 font-family: "Comic Sans MS";
-			 width: 25%;
-			 margin-left: 35%;
-
-		}
-		input[type="reset"]
-		{
-			 background-color: #06CFCF; 
-			 border: none;
-			 color: white;
-			 text-align: center;
-			 text-decoration: none;
-			 display: inline-block;
-			 font-size: 25px;
-			 cursor: pointer;
-			 padding: 10px 20px;
-			 border-radius: 10px;
-			 transition-duration: 0.5s;
-			 font-family: "Comic Sans MS";
-			 width: 25%;
-			 float: right;
-			 margin-right: 40px;
-			
-		}
-	
-		input[type="submit"]:hover, input[type="reset"]:hover
-		{
-			/*border: 2px solid #4CAF50;*/
-			background-color: white;
-			color: black;
-			font-size: 25px;
-		} 
-		
-		input[type="text"]:invalid, input[type="email"]:invalid, input[type="password"]:invalid,input[type="textarea"]:invalid, #select1:invalid,input[type="date"]:invalid, textarea:invalid
-		{
-			outline: none;
-			border:2px solid red;
-		
-		}
-		input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus,input[type="textarea"]:focus, #select1:focus,input[type="date"]:focus, textarea:focus
-		{
-			outline: none;
-		
-		}
-		input[type="text"]:hover, input[type="email"]:hover, input[type="password"]:hover,input[type="textarea"]:hover, #select1:hover,input[type="date"]:hover, textarea:hover
-		{
-			background-color: lightblue;
-		}
-	</style>
 </head>
 <body>
   <div class="container">
-  	<form method="GET" action="#">
+  	<form id="form">
   		<fieldset>
   			<legend><img src="monitoring-form-icon.png" style="height: 90px;width: 90px;border-radius: 100%;"></legend>
-  			First Name:<span>&nbsp;&nbsp;</span><input type="text" name="fname" minlength="3" maxlength="10" required><br>
-  			Last Name:<span>&nbsp;&nbsp;</span> <input type="text" name="lname"  maxlength="15"><br>
-  		    Email:<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><input type="email" name="email" required><br>
-  		    Password:<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span><input type="password" name="password" minlength="8" maxlength="10" required=""><br>
-  		    My Hobbies:<div class="checkbox"><input type="checkbox" name="checkbox" value="music">Music
-  		    <input type="checkbox" name="checkbox" value="music">Dance
-  		  	<input type="checkbox" name="checkbox" value="music">Cook 
-  		    <input type="checkbox" name="checkbox" value="music">Travel</div><br><br>
+			First Name:<span>&nbsp;&nbsp;</span>
+			<input id="fname" type="text" name="fname" onkeyup="removeSpan1()"><br>
+  			<span id="fspan" class="error"></span><br>
+  			
+			Last Name:<span>&nbsp;&nbsp;</span>
+			<input id="lname" type="text" name="lname" onkeyup="removeSpan2()"><br>
+  			<span id="lspan" class="error"></span><br>
+  		    
+			Email:<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+			<input id="email" type="text" name="email" onkeyup="removeSpan3()"><br>
+  		    <span id="espan" class="error"></span><br>
+  		    
+			Password:<span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+			<input id="pass" type="password" name="password" onkeyup="removeSpan4()"><br>
+  		    <span id="pspan"class="error"></span><br>
+  		    
+  		    My Hobbies:<div class="checkbox">
+			<input id="check1" type="checkbox" name="checkbox" value="music">Music
+  		    <input id="check2" type="checkbox" name="checkbox" value="music">Dance
+  		  	<input id="check3" type="checkbox" name="checkbox" value="music">Cook 
+  		    <input id="check4" type="checkbox" name="checkbox" value="music">Travel</div><br><br>
   		    Qualification:
   		    <select id="select1">
-  		    	<option  id="option1">B.Tech</option>
-  		    	<option id="option1">BSC</option>
-  		    	<option id="option1">MSC</option>
+  		    	<option  id="option1" value="BTech">B.Tech</option>
+  		    	<option id="option1" value="BSC">BSC</option>
+  		    	<option id="option1" value="MSC">MSC</option>
   		    </select><br><br>
-  		    Date Of Birth:<input type="date" name=""> <!-- <select id="select21">
-  		    	<option>1</option>
-  		    	<option>2</option>
-  		    	<option>3</option>
-  		    	<option>4</option>
-  		    	<option>5</option>
-  		    	<option>6</option>
-  		    	<option>7</option>
-  		    	<option>8</option>
-  		    	<option>9</option>
-  		    	<option>10</option>
-  		    	<option>11</option>
-  		    	<option>12</option>
-  		    	<option>13</option>
-  		    	<option>14</option>
-  		    	<option>15</option>
-  		    	<option>16</option>
-  		    	<option>17</option>
-  		    	<option>18</option>
-  		    	<option>19</option>
-  		    	<option>20</option>
-  		    	<option>21</option>
-  		    	<option>22</option>
-  		    	<option>23</option>
-  		    	<option>24</option>
-  		    	<option>25</option>
-  		    	<option>26</option>
-  		    	<option>27</option>
-  		    	<option>28</option>
-  		    	<option>29</option>
-  		    	<option>30</option>
-  		    	<option>31</option>
-
-  		    </select>
-  		     <select id="select2">
-  		    	<option>January</option>
-  		    	<option>February</option>
-  		    	<option>March</option>
-  		    	<option>April</option>
-  		    	<option>May</option>
-  		    	<option>June</option>
-  		    	<option>July</option>
-  		    	<option>August</option>
-  		    	<option>September</option>
-  		    	<option>October</option>
-  		    	<option>November</option>
-  		    	<option>December</option>
-  		    </select>
-  		     <select id="select2">
-  		     	<option>1960</option>
-  		     	<option>1961</option>
-  		     	<option>1962</option>
-  		     	<option>1963</option>
-  		     	<option>1964</option>
-  		    	<option>1965</option>
-  		    	<option>1966</option>
-  		    	<option>1967</option>
-  		    	<option>1968</option>
-  		    	<option>1969</option>
-  		    	<option>1970</option>
-  		    	<option>1971</option>
-  		    	<option>1972</option>
-  		    	<option>1973</option>
-  		    	<option>1974</option>
-  		    	<option>1975</option>
-  		    	<option>1976</option>
-  		    	<option>1977</option>
-  		    	<option>1978</option>
-  		    	<option>1979</option>
-  		    	<option>1980</option>
-  		    	<option>1981</option>
-  		    	<option>1982</option>
-  		    	<option>1983</option>
-  		    	<option>1984</option>
-  		    	<option>1985</option>
-  		    	<option>1986</option>
-  		    	<option>1987</option>
-  		    	<option>1988</option>
-  		    	<option>1989</option>
-  		    	<option>1990</option>
-  		    	<option>1991</option>
-  		    	<option>1992</option>
-  		    	<option>1993</option>
-  		    	<option>1994</option>
-  		    	<option>1995</option>
-  		    	<option>1996</option>
-  		    	<option>1997</option>
-  		    	<option>1998</option>
-  		    	<option>1999</option>
-  		    	<option>2000</option>
-  		    	<option>2001</option>
-  		    	<option>2002</option>
-  		    	<option>2003</option>
-  		    	<option>2004</option>
-  		    	<option>2005</option>
-  		    	<option>2006</option>
-  		    	<option>2007</option>
-  		    	<option>2008</option>
-  		    	<option>2009</option>
-  		    	<option>2010</option>
-  		    	<option>2011</option>
-  		    	<option>2012</option>
-  		    	<option>2013</option>
-  		    	<option>2014</option>
-  		    	<option>2015</option>
-  		    	<option>2016</option>
-  		    	<option>2017</option>
-  		    	<option>2018</option>
-  		    </select> -->
+  		    Date Of Birth:<input id="date" type="date" value="date"> 
   		    <br><br>
   		    Gender:<span>&nbsp;&nbsp;&nbsp;</span> <input id="radio1" type="radio" name="radio">Male
-  		    	<input type="radio" name="radio">Female
-  		    	<input type="radio" name="radio">Other<br>
-  		    	Notes:<textarea rows="5" cols="20"></textarea>
-  		    	<input type="submit" name="submit" value="Submit">
+  		    	<input id="radio2" type="radio" name="radio">Female
+  		    	<input id="radio3" type="radio" name="radio">Other<br>
+  		    	Notes:<textarea id="textarea" rows="5" cols="20"></textarea>
+  		    	<input type="submit" name="submit" value="Submit" onclick="submitForm()">
   		    	<input type="reset" name="reset" value="Reset">
-
+  		    	
   		</fieldset>
   	</form>
   </div>
+<!--   <button onclick="submitForm()">click it</button> -->
+  
 </body>
 </html>
